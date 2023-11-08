@@ -1,0 +1,3 @@
+ django-tailwind
+ django-tailwind[reload]
+ Django == 4.2.6
