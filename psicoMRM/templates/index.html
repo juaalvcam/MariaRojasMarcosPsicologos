@@ -148,4 +148,10 @@
   </button>
 </div>
 
+<!--AGREGAR TEXTO-->
+<div>
+  {% for o in opiniones %}
+  <span class="text-red-500">{{o.nombre}}</span>
+  {% endfor %}
+</div>
 {% endblock %}

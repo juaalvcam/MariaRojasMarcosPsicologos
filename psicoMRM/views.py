@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Opiniones
 
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {"opiniones": Opiniones.objects.all()})
