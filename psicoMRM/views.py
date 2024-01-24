@@ -1,7 +1,9 @@
 from django.shortcuts import render
 
 from .models import Opiniones
+from .scrapping import populate
 
 
 def index(request):
-    return render(request, "index.html", {"opiniones": Opiniones.objects.all()})
+    populate()
+    return render(request, "index.html", {"opiniones": Opiniones.objects.all().order_by("-fecha")[:6]})

@@ -148,10 +148,24 @@
   </button>
 </div>
 
-<!--AGREGAR TEXTO-->
-<div>
+<!-- OPINIONES -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
   {% for o in opiniones %}
-  <span class="text-red-500">{{o.nombre}}</span>
+  <div class="p-6 shadow-md rounded-md border border-gray-950 ml-4 mr-4 hover:bg-blue-100">
+    <div class="flex items-center mb-2">
+      <div class="ml-2 text-blue-600 text-sm">{{o.fecha}}</div>
+    </div>
+    <div class="text-lg font-semibold mb-2 text-center">{{o.nombre}}</div>
+    <div class="text-gray-700 text-justify">{{o.comentario}}</div>
+  </div>
   {% endfor %}
+</div>
+<div class="items-center justify-center flex text-center">
+  <button
+    onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
+    class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Ver todas las opiniones
+  </button>
 </div>
 {% endblock %}
