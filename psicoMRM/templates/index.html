@@ -148,10 +148,23 @@
   </button>
 </div>
 
+<!--RESERVAR CITAS-->
+<div class="items-center justify-center flex">
+  <button
+    class="text-center mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
+  >
+    Reservar cita
+  </button>
+</div>
+
 <!-- OPINIONES -->
+<h3 class="text-center text-2xl mt-9 font-serif">OPINIONES</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
   {% for o in opiniones %}
-  <div class="p-6 shadow-md rounded-md border border-gray-950 ml-4 mr-4 hover:bg-blue-100">
+  <div
+    class="p-6 shadow-md rounded-md border border-gray-950 ml-4 mr-4 hover:bg-blue-100"
+  >
     <div class="flex items-center mb-2">
       <div class="ml-2 text-blue-600 text-sm">{{o.fecha}}</div>
     </div>
