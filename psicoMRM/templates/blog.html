@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load filters %}
+<div class="text-center">
+  {% block content %} {% if user.is_superuser %}
+  <!-- Modal toggle -->
+  <div class="items-center justify-center text-center flex mt-10">
+    <button
+      data-modal-target="authentication-modal"
+      data-modal-toggle="authentication-modal"
+      class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      type="button"
+    >
+      Crear nuevo post
+    </button>
+  </div>
+
+  <!-- Main modal -->
+  <div
+    id="authentication-modal"
+    tabindex="-1"
+    aria-hidden="true"
+    class="hidden flex items-center justify-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+  >
+    <div class="relative p-4 w-full max-w-md max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow">
+        <!-- Modal header -->
+        <div
+          class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+        >
+          <h3
+            class="text-xl font-semibold text-black text-center flex items-center"
+          >
+            Crea un nuevo post
+          </h3>
+          <button
+            type="button"
+            class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="authentication-modal"
+          >
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Cerrar modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %} {% for field in form %}
+            <div class="mb-4">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="{{ field.id_for_label }}"
+              >
+                {{ field.label }}
+              </label>
+              {{ field|addcss:"shadow appearance-none border-black rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline overflow-hidden border" }}
+              <br />
+              {% for error in field.errors %}
+              <p class="text-red-500 text-sm italic">{{ error }}</p>
+              {% endfor %}
+            </div>
+            {% endfor %}
+            <br />
+            <button
+              type="submit"
+              class="m-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Redactar artículo
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Encuentra todos los botones que deberían abrir un modal
+      var modalToggles = document.querySelectorAll("[data-modal-toggle]");
+
+      // Para cada botón, agrega un evento de clic que muestre el modal correspondiente
+      modalToggles.forEach(function (toggle) {
+        toggle.addEventListener("click", function () {
+          var modalId = toggle.getAttribute("data-modal-toggle");
+          var modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.remove("hidden");
+          }
+        });
+      });
+
+      // Encuentra todos los botones que deberían cerrar un modal
+      var modalHides = document.querySelectorAll("[data-modal-hide]");
+
+      // Para cada botón, agrega un evento de clic que oculte el modal correspondiente
+      modalHides.forEach(function (hide) {
+        hide.addEventListener("click", function () {
+          var modalId = hide.getAttribute("data-modal-hide");
+          var modal = document.getElementById(modalId);
+          if (modal) {
+            modal.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+  {% endif %}
+  <!-- ARTICULOS-->
+  {% if articulos %}
+  <div class="ml-10 mr-10 mt-12">
+    <div class="items-center justify-center">
+      {% for dato in articulos %}
+      <div class="mt-8">
+        <img src="{{ STATIC_URL }}{{ dato.imagen }}" alt="" />
+        <div class="mt-2">
+          <p class="text-lg mt-2 text-white">
+            Título:
+            <span class="text-green-500 text-xl hover:text-green-200 underline"
+              >{{ dato.titulo }}</span
+            >
+          </p>
+          <p class="text-lg mt-2 text-white">
+            Descripción:
+            <a class="text-lg mt-2 hover:text-blue-500 text-white">
+              <span class="text-red-500 text-xl">{{ dato.descripcion }}</span>
+            </a>
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}{% endblock %}
+</div>

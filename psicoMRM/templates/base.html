@@ -41,7 +41,7 @@
           <a class="mr-5 hover:text-blue-600">Adolescentes</a>
           <a class="mr-5 hover:text-blue-600">Adultos</a>
           <a class="mr-5 hover:text-blue-600">Parejas</a>
-          <a class="mr-5 hover:text-blue-600">Blog</a>
+          <a class="mr-5 hover:text-blue-600" href="{% url 'blog' %}">Blog</a>
           <a class="mr-5 hover:text-blue-600" href="{% url 'about' %}"
             >Equipo</a
           >
@@ -204,7 +204,11 @@
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Blog</a>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'blog' %}"
+                  >Blog</a
+                >
               </li>
               <li>
                 <a
