@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load filters %}
+{% extends 'base.html' %} {% load filters %} {% load static %}
 <div class="text-center">
   {% block content %} {% if user.is_superuser %}
   <!-- Modal toggle -->
@@ -140,7 +140,7 @@
         <div class="flex-shrink-0">
           <img
             class="h-48 w-full object-contain"
-            src="{{ STATIC_URL }}{{ dato.imagen }}"
+            src="{% static dato.imagen|remove_static %}"
             alt=""
           />
         </div>
