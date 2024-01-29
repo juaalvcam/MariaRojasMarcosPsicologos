@@ -14,7 +14,7 @@ from .forms import BlogForm, RegisterForm, LoginForm
 
 def index(request):
     populate()
-    return render(request, "index.html", {"opiniones": Opiniones.objects.all().order_by("-fecha")[:6]})
+    return render(request, "index.html", {"opiniones": Opiniones.objects.all().order_by("-fecha")[:6], 'STATIC_URL': settings.STATIC_URL})
 
 
 def about(request):

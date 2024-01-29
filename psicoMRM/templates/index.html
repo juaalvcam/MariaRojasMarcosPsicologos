@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <br />
 <script>
   window.addEventListener("DOMContentLoaded", (event) => {
@@ -74,6 +74,12 @@
       </div>
     </div>
     <!-- Item 3 -->
+    <div class="hidden duration-200 ease-in-out" data-carousel-item>
+      <img
+        src="{% static 'articulos/logotipo.jpg' %}"
+        class="absolute block w-2/3 h-96 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+      />
+    </div>
   </div>
   <!-- Slider indicators -->
   <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
@@ -92,6 +98,13 @@
       data-carousel-slide-to="1"
     ></button>
     <!--AGREGAR TANTOS BOTONES COMO ITEMS HAYA ENJ EL CARUSEL-->
+    <button
+      type="button"
+      class="w-3 h-3 rounded-full bg-blue-500"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"
+    ></button>
   </div>
   <!-- Slider controls -->
   <button
