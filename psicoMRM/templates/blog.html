@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% load filters %}
+{% extends 'base.html' %} {% load filters %}
 <div class="text-center">
   {% block content %} {% if user.is_superuser %}
   <!-- Modal toggle -->
@@ -115,28 +114,42 @@
           }
         });
       });
+
+      // Verifica si hay errores en el formulario
+      var formErrors = document.querySelectorAll(
+        ".text-red-500.text-sm.italic"
+      );
+      // Si hay errores, muestra el modal automáticamente
+      if (formErrors.length > 0) {
+        var modal = document.getElementById("authentication-modal");
+        if (modal) {
+          modal.classList.remove("hidden");
+        }
+      }
     });
   </script>
   {% endif %}
   <!-- ARTICULOS-->
   {% if articulos %}
   <div class="ml-10 mr-10 mt-12">
-    <div class="items-center justify-center">
+    <div class="flex flex-wrap justify-center">
       {% for dato in articulos %}
-      <div class="mt-8">
-        <img src="{{ STATIC_URL }}{{ dato.imagen }}" alt="" />
-        <div class="mt-2">
-          <p class="text-lg mt-2 text-white">
-            Título:
-            <span class="text-green-500 text-xl hover:text-green-200 underline"
-              >{{ dato.titulo }}</span
-            >
-          </p>
-          <p class="text-lg mt-2 text-white">
-            Descripción:
-            <a class="text-lg mt-2 hover:text-blue-500 text-white">
-              <span class="text-red-500 text-xl">{{ dato.descripcion }}</span>
-            </a>
+      <div
+        class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden mx-4 my-8 border border-black"
+      >
+        <div class="flex-shrink-0">
+          <img
+            class="h-48 w-full object-contain"
+            src="{{ STATIC_URL }}{{ dato.imagen }}"
+            alt=""
+          />
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-green-500">
+            {{ dato.titulo }}
+          </div>
+          <p class="text-gray-700 text-base text-justify">
+            {{ dato.descripcion }}
           </p>
         </div>
       </div>
