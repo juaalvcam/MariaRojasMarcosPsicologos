@@ -108,3 +108,8 @@ def blog(request):
         return render(request, "blog.html", {"articulos": articulos, "form": form, 'STATIC_URL': settings.STATIC_URL})
     else:
         return render(request, "blog.html", {"articulos": articulos, "form": form, 'STATIC_URL': settings.STATIC_URL})
+
+
+# SERVICIOS
+def servicios(request):
+    return render(request, "servicios.html")

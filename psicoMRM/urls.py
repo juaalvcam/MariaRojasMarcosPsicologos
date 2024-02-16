@@ -7,6 +7,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
     path("blog/", views.blog, name="blog"),
+    path("servicios", views.servicios, name="servicios"),
     # GESTION DE USUARIOS
     path("register/", views.register, name="register"),
     path("login/", views.user_login, name="login"),
