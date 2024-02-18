@@ -91,7 +91,7 @@ def logout_session(request):
 # BLOG
 def blog(request):
     form = BlogForm()
-    articulos = Articulo.objects.all()
+    articulos = Articulo.objects.all().order_by("-creado")
     if request.method == "POST":
         form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
