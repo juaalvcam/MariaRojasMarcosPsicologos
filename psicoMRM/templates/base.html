@@ -22,28 +22,32 @@
             class="w-20 h-20 rounded-full"
           />
           <!--CAMBIAR POR LOGOTIPO-->
-          <span class="ml-3 text-xl text-cyan-50 hover:text-lime-800"
+          <span class="ml-3 text-xl text-cyan-50 hover:text-lime-800 font-thin"
             >Maria Rojas-Marcos Psicólogos</span
           >
         </a>
         <nav
           class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mr-5 hover:text-lime-800 text-cyan-50" href="/">Inicio</a>
-          <a class="mr-5 hover:text-lime-800 text-cyan-50">Adolescentes</a>
-          <a class="mr-5 hover:text-lime-800 text-cyan-50">Adultos</a>
-          <a class="mr-5 hover:text-lime-800 text-cyan-50">Parejas</a>
+          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin" href="/"
+            >Inicio</a
+          >
+          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
+            >Adolescentes</a
+          >
+          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin">Adultos</a>
+          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin">Parejas</a>
           <a
-            class="mr-5 hover:text-lime-800 text-cyan-50"
+            class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
             href="{% url 'blog' %}"
             >Blog</a
           >
           <a
-            class="mr-5 hover:text-lime-800 text-cyan-50"
+            class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
             href="{% url 'about' %}"
             >Equipo</a
           >
-          <a class="mr-5 hover:text-lime-800" href="{% url 'servicios' %}"
+          <a class="mr-5 hover:text-lime-800 font-thin" href="{% url 'servicios' %}"
             >Servicios</a
           >
         </nav>
@@ -111,7 +115,7 @@
         {% if user.is_anonymous %}
         <a href="{% url 'register' %}">
           <button
-            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0"
+            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0 font-thin"
           >
             Registrarse como administrador
             <svg
@@ -130,7 +134,7 @@
         {% else %}
         <a href="{% url 'logout' %}">
           <button
-            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0"
+            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0 font-thin"
           >
             Cerrar sesión
             <svg

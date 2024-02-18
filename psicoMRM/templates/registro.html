@@ -4,12 +4,12 @@
     {% csrf_token %} {% for field in form %}
     <div class="mb-4">
       <label
-        class="block text-gray-700 text-sm font-bold mb-2"
+        class="block text-lime-950 text-2xl font-thin mb-2"
         for="{{ field.id_for_label }}"
       >
         {{ field.label }}
       </label>
-      {{ field|addcss:"shadow appearance-none border-black rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline overflow-hidden border" }}
+      {{ field|addcss:"shadow appearance-none border-black rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline overflow-hidden border text-lime-950 font-thin" }}
       <br />
       {% for error in field.errors %}
       <p class="text-red-500 text-sm italic">{{ error }}</p>
@@ -24,9 +24,9 @@
       Registrarse
     </button>
   </form>
-  <p class="text-black text-lg italic mt-2">
+  <p class="text-black text-lg font-thin mt-2">
     ¿Ya tienes cuenta?
-    <a href="{% url 'login' %}" class="text-lime-950 hover:text-lime-800"
+    <a href="{% url 'login' %}" class="text-lime-950 hover:text-lime-800 text-xl"
       >Inicia sesión</a
     >
   </p>
