@@ -163,10 +163,10 @@
 
 <!-- SERVICIOS -->
 <div class="container mx-auto p-8">
-  <h1 class="text-4xl font-bold mb-8 text-center">Servicios</h1>
+  <h1 class="text-4xl font-bold mb-8 text-center text-lime-900">Servicios</h1>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'terapia.png' %}"
@@ -174,7 +174,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'psicologo.png' %}"
@@ -182,7 +182,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'terapia (1).png' %}"
@@ -190,7 +190,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'rehabilitacion.png' %}"
@@ -198,7 +198,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'consejeria-de-pareja.png' %}"
@@ -206,7 +206,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'reunion.png' %}"
@@ -214,7 +214,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'liderazgo.png' %}"
@@ -222,7 +222,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'masaje.png' %}"
@@ -230,7 +230,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'cuidados-personales.png' %}"
@@ -239,7 +239,7 @@
       </h2>
     </div>
     <div class="bg-white p-6 rounded-full shadow-lg">
-      <h2 class="text-2xl font-bold mb-4 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-center text-lime-900">
         <img
           class="h-12 w-12 mr-4 float-left"
           src="{% static 'nutricionista.png' %}"
@@ -252,7 +252,7 @@
 <!--RESERVAR CITAS-->
 <div class="items-center justify-center flex">
   <button
-    class="text-center mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    class="text-center mt-10 bg-lime-900 hover:bg-lime-800 text-cyan-50 font-bold py-2 px-4 rounded"
     onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
   >
     Reservar cita
@@ -260,14 +260,14 @@
 </div>
 
 <!-- OPINIONES -->
-<h3 class="text-center text-2xl mt-9 font-serif">OPINIONES</h3>
+<h3 class="text-center text-2xl mt-9 font-serif text-lime-900">OPINIONES</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
   {% for o in opiniones %}
   <div
     class="p-6 shadow-md rounded-md border border-gray-950 ml-4 mr-4 hover:bg-blue-100"
   >
     <div class="flex items-center mb-2">
-      <div class="ml-2 text-blue-600 text-sm">{{o.fecha}}</div>
+      <div class="ml-2 text-lime-950 text-sm">{{o.fecha}}</div>
     </div>
     <div class="text-lg font-semibold mb-2 text-center">{{o.nombre}}</div>
     <div class="text-gray-700 text-justify">{{o.comentario}}</div>
@@ -277,7 +277,7 @@
 <div class="items-center justify-center flex text-center">
   <button
     onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
-    class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    class="mt-4 bg-lime-900 hover:bg-lime-800 text-stone-50 font-bold py-2 px-4 rounded"
   >
     Ver todas las opiniones
   </button>

@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Maria Rojas-Marcos Psicólogos</title>
   </head>
-  <body class="bg-stone-200">
-    <header class="text-white body-font bg-emerald-950">
+  <body class="bg-teal-50">
+    <header class="text-cyan-50 body-font bg-teal-950">
       <div
         class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
       >
@@ -22,22 +22,28 @@
             class="w-20 h-20 rounded-full"
           />
           <!--CAMBIAR POR LOGOTIPO-->
-          <span class="ml-3 text-xl text-white"
+          <span class="ml-3 text-xl text-cyan-50 hover:text-lime-800"
             >Maria Rojas-Marcos Psicólogos</span
           >
         </a>
         <nav
           class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mr-5 hover:text-blue-600" href="/">Inicio</a>
-          <a class="mr-5 hover:text-blue-600">Adolescentes</a>
-          <a class="mr-5 hover:text-blue-600">Adultos</a>
-          <a class="mr-5 hover:text-blue-600">Parejas</a>
-          <a class="mr-5 hover:text-blue-600" href="{% url 'blog' %}">Blog</a>
-          <a class="mr-5 hover:text-blue-600" href="{% url 'about' %}"
+          <a class="mr-5 hover:text-lime-800 text-cyan-50" href="/">Inicio</a>
+          <a class="mr-5 hover:text-lime-800 text-cyan-50">Adolescentes</a>
+          <a class="mr-5 hover:text-lime-800 text-cyan-50">Adultos</a>
+          <a class="mr-5 hover:text-lime-800 text-cyan-50">Parejas</a>
+          <a
+            class="mr-5 hover:text-lime-800 text-cyan-50"
+            href="{% url 'blog' %}"
+            >Blog</a
+          >
+          <a
+            class="mr-5 hover:text-lime-800 text-cyan-50"
+            href="{% url 'about' %}"
             >Equipo</a
           >
-          <a class="mr-5 hover:text-blue-600" href="{% url 'servicios' %}"
+          <a class="mr-5 hover:text-lime-800" href="{% url 'servicios' %}"
             >Servicios</a
           >
         </nav>
@@ -105,7 +111,7 @@
         {% if user.is_anonymous %}
         <a href="{% url 'register' %}">
           <button
-            class="inline-flex items-center bg-blue-800 border-0 py-1 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mt-4 md:mt-0"
+            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0"
           >
             Registrarse como administrador
             <svg
@@ -124,7 +130,7 @@
         {% else %}
         <a href="{% url 'logout' %}">
           <button
-            class="inline-flex items-center bg-blue-800 border-0 py-1 px-3 focus:outline-none hover:bg-blue-600 rounded text-base mt-4 md:mt-0"
+            class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0"
           >
             Cerrar sesión
             <svg
@@ -246,11 +252,11 @@
       </div>
 
       <!--REDES SOCIALES-->
-      <div class="bg-gray-100">
+      <div class="bg-emerald-950">
         <div
           class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
         >
-          <p class="text-gray-500 text-sm text-center sm:text-left">
+          <p class="text-cyan-50 text-sm text-center sm:text-left">
             © 2023 Maria Rojas-Marcos Psicólogos
           </p>
           <span
