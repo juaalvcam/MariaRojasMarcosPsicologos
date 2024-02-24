@@ -7,7 +7,13 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
     path("blog/", views.blog, name="blog"),
-    path("servicios", views.servicios, name="servicios"),
+    # SERVICIOS
+    path("servicios/adultos/", views.servicios_adultos, name="servicios_adultos"),
+    path("servicios/parejas/", views.servicios_parejas, name="servicios_parejas"),
+    path("servicios/adolescentes/", views.servicios_adolescentes,
+         name="servicios_adolescentes"),
+    path("servicios/ninos/", views.servicios_ninos, name="servicios_ninos"),
+    path("servicios/otros/", views.servicios_otros, name="servicios_otros"),
     # GESTION DE USUARIOS
     path("register/", views.register, name="register"),
     path("login/", views.user_login, name="login"),

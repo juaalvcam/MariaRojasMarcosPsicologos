@@ -111,5 +111,17 @@ def blog(request):
 
 
 # SERVICIOS
-def servicios(request):
-    return render(request, "servicios.html")
+def servicios_adultos(request):
+    return render(request, "servicios_adultos.html")
+
+def servicios_parejas(request):
+    return render(request, "servicios_parejas.html")
+
+def servicios_adolescentes(request):
+    return render(request, "servicios_adolescentes.html")
+
+def servicios_ninos(request):
+    return render(request, "servicios_ninos.html")
+
+def servicios_otros(request):
+    return render(request, "servicios_otros.html")

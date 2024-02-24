@@ -8,6 +8,7 @@
     <title>Maria Rojas-Marcos Psicólogos</title>
     <script src="{% static 'js/carrousel.js' %}"></script>
     <script src="{% static 'js/modal_articulo.js' %}"></script>
+    <script src="{% static 'js/dropdown.js' %}"></script>
   </head>
   <body class="bg-teal-50">
     <header class="text-cyan-50 body-font bg-teal-950">
@@ -34,11 +35,6 @@
           <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin" href="/"
             >Inicio</a
           >
-          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
-            >Adolescentes</a
-          >
-          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin">Adultos</a>
-          <a class="mr-5 hover:text-lime-800 text-cyan-50 font-thin">Parejas</a>
           <a
             class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
             href="{% url 'blog' %}"
@@ -49,11 +45,7 @@
             href="{% url 'about' %}"
             >Equipo</a
           >
-          <a
-            class="mr-5 hover:text-lime-800 font-thin"
-            href="{% url 'servicios' %}"
-            >Servicios</a
-          >
+          {% include 'dopdown_servicios.html' %}
         </nav>
 
         <!--REDES SOCIALES-->
