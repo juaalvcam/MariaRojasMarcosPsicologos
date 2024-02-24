@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load filters %} {% load static %} {% block content %}
 <br />
 {% include 'index_carrousel.html' %}
 
@@ -98,6 +98,29 @@
   >
     Reservar cita
   </button>
+</div>
+
+<!-- ULTIMA ENTRADA DEL BLOG -->
+<div class="container mx-auto p-8">
+  <h1 class="text-4xl font-thin mb-8 text-center text-lime-900">
+    Última Entrada del Blog
+  </h1>
+  <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+    {% for a in articulo_mas_reciente %}
+    <div class="bg-white p-6 rounded-md shadow-lg">
+      <h2 class="text-2xl font-thin mb-4 text-center text-lime-900">
+        <img
+          class="h-12 w-12 mr-4 float-left"
+          src="{% static a.imagen|remove_static %}"
+        />{{a.titulo}}
+      </h2>
+      <p class="text-justify font-thin overflow-hidden h-20" data-lines="3">
+        {{a.descripcion}}
+      </p>
+      <button class="leer-mas">Leer más</button>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 <!-- OPINIONES -->
