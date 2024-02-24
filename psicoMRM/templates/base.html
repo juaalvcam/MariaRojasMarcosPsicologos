@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Maria Rojas-Marcos Psicólogos</title>
+    <script src="{% static 'js/carrousel.js' %}"></script>
+    <script src="{% static 'js/modal_articulo.js' %}"></script>
   </head>
   <body class="bg-teal-50">
     <header class="text-cyan-50 body-font bg-teal-950">
@@ -47,7 +49,9 @@
             href="{% url 'about' %}"
             >Equipo</a
           >
-          <a class="mr-5 hover:text-lime-800 font-thin" href="{% url 'servicios' %}"
+          <a
+            class="mr-5 hover:text-lime-800 font-thin"
+            href="{% url 'servicios' %}"
             >Servicios</a
           >
         </nav>
