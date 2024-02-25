@@ -88,27 +88,20 @@
   {% endif %}
   <!-- ARTICULOS-->
   {% if articulos %}
-  <div class="ml-10 mr-10 mt-12">
-    <div class="flex flex-wrap justify-center">
+  <div class="container mx-auto p-8">
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
       {% for dato in articulos %}
-      <div
-        class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden mx-4 my-8 border border-black"
-      >
-        <div class="flex-shrink-0">
+      <div class="bg-white p-6 rounded-md shadow-lg">
+        <h2 class="text-2xl font-thin mb-4 text-center text-lime-900">
           <img
-            class="h-48 w-full object-contain"
+            class="h-12 w-12 mr-4 float-left"
             src="{% static dato.imagen|remove_static %}"
-            alt=""
-          />
-        </div>
-        <div class="px-6 py-4">
-          <div class="font-bold text-xl mb-2 text-green-500">
-            {{ dato.titulo }}
-          </div>
-          <p class="text-gray-700 text-base text-justify">
-            {{ dato.descripcion }}
-          </p>
-        </div>
+          />{{dato.titulo}}
+        </h2>
+        <p class="text-justify font-thin overflow-hidden h-20" data-lines="3">
+          {{dato.descripcion}}
+        </p>
+        <button class="leer-mas">Leer más</button>
       </div>
       {% endfor %}
     </div>
