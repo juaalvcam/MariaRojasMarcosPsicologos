@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
 from django.db import IntegrityError
 from django.conf import settings
@@ -110,18 +110,27 @@ def blog(request):
         return render(request, "blog.html", {"articulos": articulos, "form": form, 'STATIC_URL': settings.STATIC_URL})
 
 
+# DETALLE DE ARTÍCULO
+def article_detail(request, title):
+    return render(request, "article_detail.html", {"articulo": get_object_or_404(Articulo, titulo=title), 'STATIC_URL': settings.STATIC_URL})
+
+
 # SERVICIOS
 def servicios_adultos(request):
     return render(request, "servicios_adultos.html")
 
+
 def servicios_parejas(request):
     return render(request, "servicios_parejas.html")
+
 
 def servicios_adolescentes(request):
     return render(request, "servicios_adolescentes.html")
 
+
 def servicios_ninos(request):
     return render(request, "servicios_ninos.html")
+
 
 def servicios_otros(request):
     return render(request, "servicios_otros.html")
