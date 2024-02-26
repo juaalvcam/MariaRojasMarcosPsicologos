@@ -88,29 +88,33 @@
   {% endif %}
 
   <!-- ARTICULOS-->
-  {% if articulos %}
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 ml-10">
-    {% for dato in articulos %}
+  <div class="container mx-auto p-8">
+    {% if articulos %}
     <div
-      class="p-6 shadow-md rounded-md border border-x-8 border-lime-950 ml-4 mr-4 hover:bg-blue-100 flex flex-col items-center"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 ml-10 justify-center items-center align-middle"
     >
-      <img
-        class="h-48 w-72 mr-4 sm:h-32 sm:w-48"
-        src="{% static dato.imagen|remove_static %}"
-      />
-      <h2 class="text-2xl font-thin mb-4 text-justify text-lime-900">
-        {{dato.titulo}}
-      </h2>
-      <p
-        class="text-justify font-thin overflow-hidden h-20 sm:h-16"
-        data-lines="3"
+      {% for dato in articulos %}
+      <div
+        class="bg-white p-6 rounded-full shadow-lg flex flex-col overflow-hidden items-center"
       >
-        {{dato.descripcion}}
-      </p>
-      <button class="leer-mas">Leer más</button>
+        <img
+          class="max-h-48 max-w-72 mr-4 sm:max-h-32 sm:max-w-48 object-cover"
+          src="{% static dato.imagen|remove_static %}"
+        />
+        <h2 class="text-2xl font-thin mb-4 text-justify text-lime-900">
+          {{dato.titulo}}
+        </h2>
+        <p
+          class="text-justify font-thin overflow-auto max-h-32 sm:max-h-24"
+          data-lines="3"
+        >
+          {{dato.descripcion}}
+        </p>
+        <button class="leer-mas">Leer más</button>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+    {% endif %}
   </div>
-  {% endif %}
 </div>
 {% endblock %}

@@ -107,7 +107,9 @@
   </h3>
   <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mt-10">
     {% for a in articulo_mas_reciente %}
-    <div class="bg-white p-6 rounded-full shadow-lg">
+    <div
+      class="bg-white p-10 rounded-full shadow-lg overflow-hidden items-center"
+    >
       <h2 class="text-2xl font-thin mb-4 text-center text-lime-900">
         <img
           class="h-36 w-36 mr-4 float-left"
@@ -128,7 +130,9 @@
   <h3 class="text-center text-2xl mt-9 font-serif text-lime-900">OPINIONES</h3>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
     {% for o in opiniones %}
-    <div class="bg-white p-6 rounded-full shadow-lg">
+    <div
+      class="bg-white p-9 rounded-full shadow-lg overflow-hidden items-center"
+    >
       <div class="flex items-center mb-2">
         <div class="ml-2 text-lime-950 text-lg font-thin">{{o.fecha}}</div>
       </div>
