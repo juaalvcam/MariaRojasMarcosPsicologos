@@ -9,6 +9,7 @@ urlpatterns = [
     path("blog/", views.blog, name="blog"),
     path("blog/<str:title>/", views.article_detail, name="article_detail"),
     # SERVICIOS
+    path("servicios/", views.servicios, name="servicios"),
     path("servicios/adultos/", views.servicios_adultos, name="servicios_adultos"),
     path("servicios/parejas/", views.servicios_parejas, name="servicios_parejas"),
     path("servicios/adolescentes/", views.servicios_adolescentes,

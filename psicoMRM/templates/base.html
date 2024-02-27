@@ -45,6 +45,11 @@
             href="{% url 'about' %}"
             >Equipo</a
           >
+          <a
+            class="mr-5 hover:text-lime-800 text-cyan-50 font-thin"
+            href="{% url 'servicios' %}"
+            >Servicios</a
+          >
           {% include 'dopdown_servicios.html' %}
         </nav>
 
@@ -109,11 +114,11 @@
         </span>
 
         {% if user.is_anonymous %}
-        <a href="{% url 'register' %}">
+        <a href="{% url 'login' %}">
           <button
             class="inline-flex items-center bg-lime-950 border-0 py-1 px-3 focus:outline-none hover:bg-lime-800 rounded text-base mt-4 md:mt-0 font-thin"
           >
-            Registrarse como administrador
+            Log in
             <svg
               fill="none"
               stroke="currentColor"

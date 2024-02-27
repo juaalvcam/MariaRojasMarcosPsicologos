@@ -116,6 +116,10 @@ def article_detail(request, title):
 
 
 # SERVICIOS
+def servicios(request):
+    return render(request, "servicios.html")
+
+
 def servicios_adultos(request):
     return render(request, "servicios_adultos.html")
 
