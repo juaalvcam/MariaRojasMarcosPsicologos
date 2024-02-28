@@ -120,21 +120,21 @@ def servicios(request):
     return render(request, "servicios.html")
 
 
-def servicios_adultos(request):
-    return render(request, "servicios_adultos.html")
+def terapia_individual(request):
+    return render(request, "terapia_individual.html")
 
 
-def servicios_parejas(request):
-    return render(request, "servicios_parejas.html")
+def terapia_pareja(request):
+    return render(request, "terapia_pareja.html")
 
 
-def servicios_adolescentes(request):
-    return render(request, "servicios_adolescentes.html")
+def terapia(request):
+    return render(request, "terapia.html")
 
 
-def servicios_ninos(request):
-    return render(request, "servicios_ninos.html")
+def estres(request):
+    return render(request, "estres.html")
 
 
-def servicios_otros(request):
-    return render(request, "servicios_otros.html")
+def coaching(request):
+    return render(request, "coaching.html")
