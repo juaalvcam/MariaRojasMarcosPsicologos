@@ -1,7 +1,9 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <br />
 <div class="container mx-auto p-8">
-  <div class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:overflow-hidden sm:overflow-hidden">
+  <div
+    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:w-full sm:w-full"
+  >
     <div class="text-center flex items-center mr-10">
       <div class="text-xl font-thin text-black mb-4 text-center mr-8">
         María Rojas Marcos Asensi
@@ -12,81 +14,144 @@
         class="w-36 h-36 rounded-full"
       />
     </div>
-    <div class="flex flex-col md:flex-row">
-      <div class="flex-1 ml-10">
-        <h2
-          class="text-lg text-black mb-5 mt-5 flex items-center font-mono font-bold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="h-5 w-5 text-gray-500 mr-2"
-          >
-            <path
-              d="m15.995 5.04-2.686-.233-1.05-2.47a.555.555 0 0 0-1.02 0l-1.05 2.476-2.68.227a.554.554 0 0 0-.316.971l2.036 1.765-.61 2.62a.554.554 0 0 0 .827.6l2.303-1.388L14.052 11a.554.554 0 0 0 .827-.6l-.61-2.625 2.037-1.765c.372-.322.177-.932-.311-.97Zm-5 9.92-2.686-.233-1.05-2.47a.555.555 0 0 0-1.02 0l-1.05 2.475-2.68.228a.554.554 0 0 0-.316.971l2.036 1.765-.61 2.62a.554.554 0 0 0 .827.6l2.303-1.388 2.303 1.393a.554.554 0 0 0 .827-.6l-.61-2.625 2.037-1.765c.372-.322.177-.932-.311-.971Zm7.814-.233 2.686.233c.488.039.683.65.31.971l-2.036 1.765.61 2.625a.554.554 0 0 1-.827.6l-2.303-1.393-2.303 1.387a.554.554 0 0 1-.827-.6l.61-2.619-2.036-1.765a.554.554 0 0 1 .316-.971l2.68-.228 1.05-2.475a.555.555 0 0 1 1.02 0l1.05 2.47Z"
-            ></path>
-          </svg>
-          Especialista en:
-        </h2>
-        <ul class="list-disc list-inside text-lime-950 font-thin">
-          <li>Trastornos de Ansiedad</li>
-          <li>Trastornos Sexuales y de Pareja</li>
-          <li>Trastornos del Comportamiento Alimentario</li>
-          <li>Terapia cognitivo conductual</li>
-        </ul>
+    <div
+      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
+    >
+      <span>
+        ¡Hola! Soy María Rojas-Marcos, psicóloga y directora del Centro. Me
+        complace darle la bienvenida a nuestro espacio dedicado al crecimiento
+        personal y bienestar emocional.
+        <br />
+        <br />
+        Con más de 15 años de experiencia en el campo de los RRHH y psicología
+        clínica, me he especializado en el tratamiento de una variedad de
+        trastornos mentales, incluyendo ansiedad, depresión, traumas, trastornos
+        alimenticios y adicciones. Mi enfoque terapéutico se centra en brindar
+        un apoyo integral y personalizado a cada individuo que busca ayuda en
+        nuestro centro.
+        <br />
+        <br />
+        Los trastornos de ansiedad y depresión son áreas en las que tengo una
+        profunda experiencia. Trabajo en estrecha colaboración con mis clientes
+        para comprender las raíces de sus preocupaciones y miedos, y juntos
+        desarrollamos estrategias efectivas para enfrentar y superar estos
+        desafíos.
+        <br />
+        <br />
+        Además, tengo una pasión particular por el tratamiento de traumas y
+        trastornos relacionados. Utilizo enfoques basados en la evidencia, como
+        la terapia cognitivo-conductual (TCC) y la terapia de exposición, para
+        ayudar a mis clientes a procesar y sanar las heridas emocionales del
+        pasado.
+        <br />
+        <br />
+        En el área de los trastornos alimenticios y las adicciones, ofrezco un
+        enfoque compasivo y comprensivo para abordar las complejas interacciones
+        entre la mente y el cuerpo. Trabajo con mis clientes para identificar
+        los factores subyacentes que contribuyen a estos comportamientos y
+        desarrollar estrategias efectivas para promover la recuperación y el
+        bienestar duraderos.
+        <br />
+        <br />
+        En el gabinete, mi objetivo es proporcionar un ambiente seguro y de
+        apoyo donde cada individuo se sienta escuchado, comprendido y valorado.
+        Mi compromiso es ayudarte a encontrar el camino hacia una vida más plena
+        y significativa, donde puedas experimentar una mayor libertad emocional
+        y un mayor sentido de bienestar.
+        <br />
+        <br />
+        ¡Espero poder acompañarte en tu viaje hacia el crecimiento personal y la
+        sanación emocional!
+      </span>
+    </div>
+  </div>
+  <br />
+  <div
+    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:overflow-hidden sm:overflow-hidden"
+  >
+    <div class="text-center flex items-center mr-10">
+      <div class="text-xl font-thin text-black mb-4 text-center mr-8">
+        Belén Peñalva Gutiérrez
       </div>
-      <div class="flex-1 mr-10">
-        <h2
-          class="text-lg text-black mb-5 mt-5 flex items-center font-mono font-bold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="h-5 w-5 text-gray-500 mr-2"
-          >
-            <path
-              d="M5 13.18v2.81c0 .73.4 1.41 1.04 1.76l5 2.73c.6.33 1.32.33 1.92 0l5-2.73c.64-.35 1.04-1.03 1.04-1.76v-2.81l-6.04 3.3c-.6.33-1.32.33-1.92 0L5 13.18Zm6.04-9.66-8.43 4.6c-.69.38-.69 1.38 0 1.76l8.43 4.6c.6.33 1.32.33 1.92 0L21 10.09V16c0 .55.45 1 1 1s1-.45 1-1V9.59c0-.37-.2-.7-.52-.88l-9.52-5.19a2.04 2.04 0 0 0-1.92 0Z"
-            ></path>
-          </svg>
-          Experiencia
-        </h2>
-        <ul class="list-disc list-inside text-lime-950 font-thin">
-          <li>Coach Ejecutiva en Sevilla Monstessori School</li>
-          <li>Psicóloga en la Asociación contra el Cáncer</li>
-          <li>Psicóloga General Sanitaria en Clínica San Blas</li>
-          <li>Directora de Mega- Store en Prenatal, Madrid</li>
-        </ul>
+      <img
+        src="{% static 'Foto Belén.jpeg' %}"
+        alt=""
+        class="w-32 h-36 rounded-full"
+      />
+    </div>
+    <div
+      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
+    >
+      <span>
+        ¡Hola! Soy Belén Peñalva, neuropsicóloga. Mi pasión radica en comprender
+        cómo funciona el cerebro y cómo impacta en el desarrollo emocional y
+        cognitivo de niños, adolescentes y adultos.
+        <br />
+        <br />
+        En mi práctica, me especializo en evaluar y tratar una variedad de
+        trastornos y dificultades neuropsicológicas en niños y adolescentes.
+        Utilizo evaluaciones exhaustivas para identificar las necesidades
+        individuales de mis jóvenes pacientes y desarrollar planes de
+        intervención personalizados que fomenten su desarrollo y bienestar.
+        <br />
+        <br />
+        Además, tengo experiencia en el tratamiento de trastornos de ansiedad en
+        adultos. Mi enfoque terapéutico se centra en proporcionar herramientas
+        prácticas y estrategias efectivas para ayudar a mis pacientes a manejar
+        y superar sus síntomas de ansiedad.
+        <br />
+        <br />
+        Mi objetivo es ayudar a cada individuo a alcanzar su máximo potencial y
+        disfrutar de una vida plena y significativa.
+        <br />
+        <br />
+        ¡Espero poder trabajar juntos para superar tus desafíos y alcanzar tus
+        metas!
+      </span>
+    </div>
+  </div>
+  <br />
+  <div
+    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:overflow-hidden sm:overflow-hidden"
+  >
+    <div class="text-center flex items-center mr-10">
+      <div class="text-xl font-thin text-black mb-4 text-center mr-8">
+        Verónica de Lózar Mena
       </div>
-      <div class="flex-1 mr-28">
-        <h2
-          class="text-lg text-black mb-5 mt-5 flex items-center font-mono font-bold"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            class="h-5 w-5 text-gray-500 mr-2"
-          >
-            <path
-              d="M20 7h-5V4c0-1.1-.9-2-2-2h-2c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2ZM9 12c.83 0 1.5.67 1.5 1.5S9.83 15 9 15s-1.5-.67-1.5-1.5S8.17 12 9 12Zm3 6H6v-.43c0-.6.36-1.15.92-1.39.64-.28 1.34-.43 2.08-.43s1.44.15 2.08.43c.55.24.92.78.92 1.39V18Zm1-10a1 1 0 1 1-2 0V5a1 1 0 1 1 2 0v3Zm4.25 8.5h-2.5c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h2.5c.41 0 .75.34.75.75s-.34.75-.75.75Zm0-3h-2.5c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h2.5c.41 0 .75.34.75.75s-.34.75-.75.75Z"
-            ></path>
-          </svg>
-          Sobre mi
-        </h2>
-        <p class="text-justify text-lime-950 font-thin">
-          En momentos difíciles, ofrezco guía y apoyo para gestionar el malestar
-          y el conflicto. Con experiencia en psicología y formación
-          especializada en trastornos de ansiedad y alimenticios, trabajo
-          contigo para construir confianza y amor propio. También tengo
-          formación en psicología infantil y adolescente, coaching, inteligencia
-          emocional y dirección financiera y de recursos humanos.
-        </p>
-      </div>
+      <img
+        src="{% static 'Foto Verónica de Lózar Mena.jpg' %}"
+        alt=""
+        class="w-36 h-36 rounded-full"
+      />
+    </div>
+    <div
+      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
+    >
+      <span>
+        ¡Hola! Soy Verónica de Lózar Mena, psicóloga en MARÍA ROJAS-MARCOS.
+        PSICÓLOGOS. Mi enfoque se centra en ayudar a las personas a superar los
+        desafíos de la ansiedad, la depresión y el trauma para que puedan vivir
+        vidas más plenas y satisfactorias.
+        <br />
+        <br />
+        Con una profunda comprensión de los complejos mecanismos de la ansiedad,
+        la depresión y el trauma, trabajo de cerca con mis clientes para
+        desarrollar estrategias efectivas de afrontamiento y recuperación.
+        Utilizo enfoques basados en la evidencia, como la terapia
+        cognitivo-conductual (TCC) y la terapia de exposición, para ayudar a mis
+        pacientes a reconstruir su resiliencia emocional y alcanzar una mayor
+        estabilidad mental.
+        <br />
+        <br />
+        Mi objetivo es proporcionar las herramientas y el apoyo necesarios para
+        que mis pacientes puedan encontrar el camino hacia la sanación y el
+        bienestar duradero.
+        <br />
+        <br />
+        Si estás listo para dar el primer paso hacia una vida más equilibrada y
+        satisfactoria, estoy aquí para acompañarte en tu viaje hacia la
+        recuperación y la transformación.
+      </span>
     </div>
   </div>
 </div>
