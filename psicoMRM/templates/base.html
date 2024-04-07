@@ -221,13 +221,25 @@
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Adolescentes</a>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'terapia_individual' %}"
+                  >Terapia Individual</a
+                >
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Adultos</a>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'terapia_pareja' %}"
+                  >Terapia de Pareja</a
+                >
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800">Parejas</a>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'terapia' %}"
+                  >Terapia Infantil y Adolescentes</a
+                >
               </li>
             </nav>
           </div>
@@ -253,8 +265,24 @@
                 >
               </li>
               <li>
-                <a class="text-gray-600 hover:text-gray-800"
-                  >Política de privacidad</a
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'servicios' %}"
+                  >Servicios</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'estres' %}"
+                  >Reducción del Estrés en Ocho Semanas</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-gray-600 hover:text-gray-800"
+                  href="{% url 'coaching' %}"
+                  >Coaching Personal y Profesional</a
                 >
               </li>
             </nav>
@@ -268,7 +296,11 @@
           class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
         >
           <p class="text-cyan-50 text-sm text-center sm:text-left">
-            © 2023 Maria Rojas-Marcos Psicólogos
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Maria Rojas-Marcos Psicólogos
           </p>
           <span
             class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start mr-4"

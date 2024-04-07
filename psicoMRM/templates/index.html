@@ -105,23 +105,31 @@
   <h3 class="text-center text-2xl mt-9 font-serif text-lime-900">
     ÚLTIMA ENTRADA DEL BLOG
   </h3>
-  <div class="grid grid-cols-1 md:grid-cols-1 gap-8 mt-10">
+  <div class="grid grid-cols-1 gap-8 mt-10">
     {% for a in articulo_mas_reciente %}
     <div
-      class="bg-white p-10 rounded-full shadow-lg overflow-hidden items-center"
+      class="bg-white p-4 sm:p-6 md:p-10 rounded-full shadow-lg overflow-hidden items-center"
     >
       <a href="{% url 'article_detail' a.titulo %}">
-        <h2
-          class="text-2xl font-thin mb-4 text-center text-lime-900 hover:text-lime-900 hover:font-bold"
-        >
+        <div class="flex flex-col sm:flex-row items-center">
           <img
-            class="h-36 w-36 mr-4 float-left"
+            class="h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 mr-4"
             src="{% static a.imagen|remove_static %}"
-          />{{a.titulo}}
-        </h2>
-        <p class="text-justify font-thin overflow-hidden h-20" data-lines="3">
-          {{a.descripcion}}
-        </p>
+          />
+          <div>
+            <h2
+              class="text-2xl font-thin mb-4 text-center sm:text-left text-lime-900 hover:text-lime-900 hover:font-bold"
+            >
+              {{a.titulo}}
+            </h2>
+            <p
+              class="text-justify font-thin overflow-hidden h-20 mr-2 ml-2 text-base md:text-base"
+              data-lines="3"
+            >
+              {{a.descripcion}}
+            </p>
+          </div>
+        </div>
       </a>
     </div>
     {% endfor %}
@@ -137,12 +145,12 @@
       class="bg-white p-9 rounded-full shadow-lg overflow-hidden items-center"
     >
       <div class="flex items-center mb-2">
-        <div class="ml-2 text-lime-950 text-lg font-thin">{{o.fecha}}</div>
+        <div class="ml-6 text-lime-950 text-lg font-thin text-center">{{o.fecha}}</div>
       </div>
       <div class="text-lg mb-2 text-center font-thin">
         <strong>{{o.nombre}}</strong>
       </div>
-      <div class="text-black text-justify font-thin">{{o.comentario}}</div>
+      <div class="text-black text-justify font-thin ml-4">{{o.comentario}}</div>
     </div>
     {% endfor %}
   </div>
