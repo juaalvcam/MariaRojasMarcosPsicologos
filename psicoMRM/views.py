@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 # local imports
 from .models import Opiniones, Articulo
 from .scrapping import populate
-from .forms import BlogForm, RegisterForm, LoginForm
+from .forms import BlogForm, RegisterForm, LoginForm, ContactForm
+from django.core.mail import send_mail
 
 
 def index(request):
@@ -138,3 +139,28 @@ def estres(request):
 
 def coaching(request):
     return render(request, "coaching.html")
+
+
+def contacto(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            contact_number = form.cleaned_data['contact_number']
+            query = form.cleaned_data['query']
+            topic = form.cleaned_data['topic']
+
+            subject = f"{topic} - {name}"
+            message = f"Nombre: {name}\nNúmero de contacto: {contact_number}\nConsulta: {query}"
+
+            send_mail(
+                subject,
+                message,
+                'correobasuradejuanjo@gmail.com',  # Remitente
+                ['correobasuradejuanjo@gmail.com'],  # Destinatario
+            )
+
+    else:
+        form = ContactForm()
+
+    return render(request, 'contacto.html', {'form': form})

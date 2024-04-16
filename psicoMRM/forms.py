@@ -61,3 +61,17 @@ class LoginForm(forms.Form):
                                min_length=6, widget=forms.TextInput, required=True)
     password = forms.CharField(label='Contraseña', max_length=100, min_length=6,
                                widget=forms.PasswordInput, required=True)
+    
+
+class ContactForm(forms.Form):
+    TOPIC_CHOICES = [
+        ('doubts', 'Dudas'),
+        ('offers', 'Ofertas'),
+        ('appointment', 'Pedir cita'),
+        ('others', 'Otros'),
+    ]
+
+    name = forms.CharField(max_length=100)
+    contact_number = forms.CharField(max_length=15)
+    query = forms.CharField(widget=forms.Textarea)
+    topic = forms.ChoiceField(choices=TOPIC_CHOICES)
