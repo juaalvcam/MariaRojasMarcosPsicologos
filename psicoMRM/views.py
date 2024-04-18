@@ -156,8 +156,8 @@ def contacto(request):
             send_mail(
                 subject,
                 message,
-                'correobasuradejuanjo@gmail.com',  # Remitente
-                ['correobasuradejuanjo@gmail.com'],  # Destinatario
+                'gabineterojasmarcos@gmail.com',  # Remitente
+                ['gabineterojasmarcos@gmail.com'],  # Destinatario
             )
             return redirect('index')
 
