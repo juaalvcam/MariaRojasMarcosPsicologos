@@ -61,7 +61,14 @@ class LoginForm(forms.Form):
                                min_length=6, widget=forms.TextInput, required=True)
     password = forms.CharField(label='Contraseña', max_length=100, min_length=6,
                                widget=forms.PasswordInput, required=True)
-    
+
+
+def validate_es_phone_number(value):
+    pattern = r'^(?:(?:\+|00)34[\s.]*)?(?:\d[\s.]*){9}$'
+    if not re.match(pattern, value):
+        raise ValidationError(
+            'El número de teléfono debe ser un número de teléfono válido de España.')
+
 
 class ContactForm(forms.Form):
     TOPIC_CHOICES = [
@@ -72,6 +79,11 @@ class ContactForm(forms.Form):
     ]
 
     tipo = forms.ChoiceField(choices=TOPIC_CHOICES)
-    nombre = forms.CharField(max_length=100)
-    numero_telefono = forms.CharField(max_length=15)
-    nota = forms.CharField(widget=forms.Textarea)
+    nombre = forms.CharField(max_length=100,
+                             min_length=5,
+                             widget=forms.TextInput,
+                             required=True)
+    numero_telefono = forms.CharField(max_length=15, required=True, validators=[
+                                      validate_es_phone_number])
+    nota = forms.CharField(widget=forms.Textarea,
+                           required=True, max_length=1000)

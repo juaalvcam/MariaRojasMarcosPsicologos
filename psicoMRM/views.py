@@ -160,10 +160,9 @@ def contacto(request):
                 ['gabineterojasmarcos@gmail.com'],  # Destinatario
             )
             return redirect('index')
-
+        else:
+            return render(request, 'contacto.html', {'form': form})
 
     else:
         form = ContactForm()
         return render(request, 'contacto.html', {'form': form})
-
-    
