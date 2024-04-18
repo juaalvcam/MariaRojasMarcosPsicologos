@@ -145,10 +145,10 @@ def contacto(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            contact_number = form.cleaned_data['contact_number']
-            query = form.cleaned_data['query']
-            topic = form.cleaned_data['topic']
+            name = form.cleaned_data['nombre']
+            contact_number = form.cleaned_data['numero_telefono']
+            query = form.cleaned_data['nota']
+            topic = form.cleaned_data['tipo']
 
             subject = f"{topic} - {name}"
             message = f"Nombre: {name}\nNúmero de contacto: {contact_number}\nConsulta: {query}"
@@ -159,8 +159,11 @@ def contacto(request):
                 'correobasuradejuanjo@gmail.com',  # Remitente
                 ['correobasuradejuanjo@gmail.com'],  # Destinatario
             )
+            return redirect('index')
+
 
     else:
         form = ContactForm()
+        return render(request, 'contacto.html', {'form': form})
 
-    return render(request, 'contacto.html', {'form': form})
+    
