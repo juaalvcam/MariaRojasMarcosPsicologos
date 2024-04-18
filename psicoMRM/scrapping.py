@@ -26,15 +26,11 @@ def populate():
         "https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla")
     s = BeautifulSoup(f, 'lxml')
 
-    # Obtenemos los datos de las opiniones (valoracion, nombre, fecha y comentario)
-    enlace = s.find("div", class_="card card-shadow-1 mb-1").find("a",
-                                                                  string=re.compile("Opiniones"))["href"]
-
     f2 = urllib.request.urlopen(
-        "https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla" + enlace)
+        "https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#profile-reviews")
     s2 = BeautifulSoup(f2, 'lxml')
 
-    datos2 = s2.find("div", id="profile-reviews")
+    datos2 = s2.find("section", id="profile-reviews")
 
     # Obtenemos la valoracion
     valoracion = datos2.find(
