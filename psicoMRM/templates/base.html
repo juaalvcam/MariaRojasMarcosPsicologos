@@ -161,12 +161,23 @@
       </div>
     </header>
     {% block content %}{% endblock %}
-    <a href="{% url 'contacto' %}" class="fixed right-4 bottom-4 bg-lime-950 hover:bg-lime-800 text-cyan-50 font-bold py-2 px-4 rounded-full flex items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-white mr-2">
+    <a href="{% url 'contacto' %}" class="!fixed !right-4 !bottom-4 bg-lime-950 hover:bg-lime-800 text-cyan-50 font-bold py-2 px-4 rounded-full flex items-center relative">      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6 text-white mr-2">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 6l8 5 8-5M4 6v10a2 2 0 002 2h12a2 2 0 002-2V6"></path>
       </svg>
-      Reserva o contacta con nosotros desde aquí.
+      Reserva o contacta con nosotros desde aquí. 
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 text-white absolute top-2 right-2 cursor-pointer" id="closeButton">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
     </a>
+    
+    <script>
+      window.onload = function() {
+        document.getElementById('closeButton').addEventListener('click', function(event) {
+          event.preventDefault();
+          this.parentNode.style.display = 'none';
+        });
+      }
+    </script>
     <!--FOOTER-->
     <footer class="text-gray-600 body-font">
       <div
