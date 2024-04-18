@@ -1,4 +1,10 @@
 {% extends 'base.html' %} {% load filters %} {% load static %} {% block content %}
+<br>
+</br>
+<div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+  <h2 class="mb-4 text-4xl tracking-tight font-bold text-lime-800">Contacta con nosotros</h2>
+  <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Eligue el tipo de consulta que nos quieres hacer, rellena los campos requeridos de forma adecuada y en breve nos pondremos en contacto contigo para ofrecerte la mejor atención.</p>
+</div>
 
 <form method="post" style="max-width: 500px; margin: auto">
   {% csrf_token %} {% for field in form %}
