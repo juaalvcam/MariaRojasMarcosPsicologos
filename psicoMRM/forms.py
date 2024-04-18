@@ -65,13 +65,13 @@ class LoginForm(forms.Form):
 
 class ContactForm(forms.Form):
     TOPIC_CHOICES = [
-        ('doubts', 'Dudas'),
-        ('offers', 'Ofertas'),
-        ('appointment', 'Pedir cita'),
-        ('others', 'Otros'),
+        ('dudas', 'Dudas'),
+        ('ofertas', 'Ofertas'),
+        ('cita', 'Pedir cita'),
+        ('otros', 'Otros'),
     ]
 
-    name = forms.CharField(max_length=100)
-    contact_number = forms.CharField(max_length=15)
-    query = forms.CharField(widget=forms.Textarea)
-    topic = forms.ChoiceField(choices=TOPIC_CHOICES)
+    tipo = forms.ChoiceField(choices=TOPIC_CHOICES)
+    nombre = forms.CharField(max_length=100)
+    numero_telefono = forms.CharField(max_length=15)
+    nota = forms.CharField(widget=forms.Textarea)

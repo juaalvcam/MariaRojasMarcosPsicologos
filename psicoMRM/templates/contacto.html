@@ -9,7 +9,16 @@
       >
         {{ field.label }}
       </label>
+      {% if field.name == 'tipo' %}
+      <div class="relative">
+        {{ field|addcss:"appearance-none shadow border-black rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline overflow-hidden border text-lime-950 font-thin" }}
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 12l-6-6h12"/></svg>
+        </div>
+      </div>
+      {% else %}
       {{ field|addcss:"shadow appearance-none border-black rounded w-full py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline overflow-hidden border text-lime-950 font-thin" }}
+      {% endif %}
       <br />
     </div>
     {% endfor %}
