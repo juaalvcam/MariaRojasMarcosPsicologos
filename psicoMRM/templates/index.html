@@ -4,7 +4,7 @@
 
 <!-- SERVICIOS -->
 <div class="container mx-auto p-8">
-  <h3 class="text-center text-2xl mt-9 font-serif text-lime-900">SERVICIOS</h3>
+  <h3 class="text-center text-2xl mt-9 font-bold text-lime-900">Servicios</h3>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
     <div class="bg-white p-6 rounded-full shadow-lg">
       <h2 class="text-2xl font-thin mb-4 text-center text-lime-900">
@@ -96,14 +96,14 @@
     class="text-center mt-10 bg-lime-900 hover:bg-lime-800 text-cyan-50 font-thin py-2 px-4 rounded text-xl"
     onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
   >
-    Reservar cita
+    Reservar cita en Doctoralia
   </button>
 </div>
 
 <!-- ULTIMA ENTRADA DEL BLOG -->
 <div class="container mx-auto p-8">
-  <h3 class="text-center text-2xl mt-9 font-serif text-lime-900">
-    ÚLTIMA ENTRADA DEL BLOG
+  <h3 class="text-center text-2xl mt-9 font-bold text-lime-900">
+    Última Entrada del Blog
   </h3>
   <div class="grid grid-cols-1 gap-8 mt-10">
     {% for a in articulo_mas_reciente %}
@@ -138,7 +138,7 @@
 
 <!-- OPINIONES -->
 <div class="container mx-auto p-8">
-  <h3 class="text-center text-2xl mt-9 font-serif text-lime-900">OPINIONES</h3>
+  <h3 class="text-center text-2xl mt-9 font-bold text-lime-900">Opiniones</h3>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
     {% for o in opiniones %}
     <div
@@ -160,14 +160,7 @@
       onclick="window.open('https://www.doctoralia.es/maria-rojas-marcos-asensi/psicologo/sevilla#tab=profile-reviews');"
       class="mt-4 bg-lime-900 hover:bg-lime-800 text-stone-50 font-thin py-2 px-4 rounded"
     >
-      <strong> Ver todas las opiniones </strong>
-    </button>
-  </div>
-  <div class="items-center justify-center flex text-center">
-    <button
-      class="mt-4 bg-lime-900 hover:bg-lime-800 text-stone-50 font-thin py-2 px-4 rounded"
-    >
-      <a href="{% url 'contacto' %}"><strong> Contacte con nosotros </strong></a>
+      <strong> Ver todas las opiniones de Doctoralia </strong>
     </button>
   </div>
   
