@@ -1,24 +1,48 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 <br />
+
 <div class="container mx-auto p-8">
-  <div
-    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:w-full sm:w-full"
-  >
-    <div class="text-center flex items-center mr-10">
-      <div class="text-xl font-thin text-black mb-4 text-center mr-8">
-        María Rojas Marcos Asensi
-      </div>
-      <img
+
+  <p class="mb-8 text-base font-thin leading-relaxed text-gray-700 antialiased">
+    ¡Bienvenidos al equipo de María Rojas-Marcos Psicologos!
+    <br />
+    <br />
+  En nuestro gabinete, fusionamos la rigurosidad de la psicología con una visión holística del bienestar emocional. Somos un equipo multidisciplinario de profesionales dedicados a ofrecer un enfoque integral para abordar los desafíos de salud mental.
+  <br />
+  <br />
+  Desde la terapia cognitivo-conductual (TCC), nos sumergimos en los patrones de pensamiento y comportamiento que pueden estar afectando tu bienestar. Trabajamos contigo para identificar y desafiar creencias limitantes, fomentando así cambios positivos y duraderos en tu vida.
+  <br />
+  <br />
+  Al mismo tiempo, abrazamos los principios de la terapia de aceptación y compromiso (ACT). Nos esforzamos por cultivar una relación amorosa con nuestras experiencias internas, ayudándote a desarrollar una mayor conciencia y aceptación de tus pensamientos y emociones. Juntos, exploramos cómo puedes comprometerte con acciones alineadas con tus valores fundamentales, incluso cuando enfrentas desafíos.
+  <br />
+  <br />
+  Lo que nos distingue es nuestra diversidad de experiencia y formación. Nuestro equipo está compuesto por psicólogos, psiquiatras, trabajadores sociales y otros profesionales, lo que nos permite ofrecer un enfoque verdaderamente integrador para tu bienestar. Colaboramos estrechamente entre disciplinas para brindarte una atención completa y personalizada que se adapte a tus necesidades individuales.
+  <br />
+  <br />
+  En el corazón de nuestro enfoque está tu crecimiento personal y bienestar emocional. Nos comprometemos a trabajar contigo en un entorno seguro y de apoyo, donde te sientas escuchado, comprendido y valorado. Tu camino hacia una vida más plena y significativa comienza aquí, con nosotros en María Rojas-Marcos Psicologos.
+  <br />
+  <br />
+  ¡Estamos aquí para ti en cada paso del camino!
+  </p>
+
+  <div class="flex items-center justify-center  mx-0.5 md:mx-auto">
+    <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-teal-950 shadow-md">
+      <div class="relative m-0 w-1/3 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+        <img
         src="//s3-eu-west-1.amazonaws.com/doctoralia.es/doctor/31f36c/31f36c0a5e617d3426e175e7d381f58a_large.jpg"
-        alt=""
-        class="w-36 h-36 rounded-full"
-      />
-    </div>
-    <div
-      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
-    >
-      <span>
-        ¡Hola! Soy María Rojas-Marcos, psicóloga y directora del Centro. Me
+          alt="image"
+          class="h-80 w-full object-cover"
+        />
+      </div>
+      <div class="p-6">
+        <h6 class="mb-4 text-base font-bold leading-relaxed tracking-normal text-lime-900 antialiased">
+          Equipo
+        </h6>
+        <h4 class="mb-2  text-2xl font-bold leading-snug tracking-normal text-lime-800 antialiased">
+          María Rojas Marcos Asensi
+        </h4>
+        <p class="mb-8 text-base font-thin leading-relaxed text-gray-700 antialiased">
+          ¡Hola! Soy María Rojas-Marcos, psicóloga y directora del Centro. Me
         complace darle la bienvenida a nuestro espacio dedicado al crecimiento
         personal y bienestar emocional.
         <br />
@@ -62,74 +86,75 @@
         <br />
         ¡Espero poder acompañarte en tu viaje hacia el crecimiento personal y la
         sanación emocional!
-      </span>
+        </p>
+        
+      </div>
     </div>
   </div>
-  <br />
-  <div
-    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:overflow-hidden sm:overflow-hidden"
-  >
-    <div class="text-center flex items-center mr-10">
-      <div class="text-xl font-thin text-black mb-4 text-center mr-8">
-        Belén Peñalva Gutiérrez
-      </div>
-      <img
+  <div class="flex items-center justify-center  mx-0.5 md:mx-auto">
+    <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-teal-950 shadow-md">
+      <div class="relative m-0 w-1/3 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+        <img
         src="{% static 'Foto Belén.jpeg' %}"
-        alt=""
-        class="w-32 h-36 rounded-full"
-      />
-    </div>
-    <div
-      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
-    >
-      <span>
-        ¡Hola! Soy Belén Peñalva, neuropsicóloga. Mi pasión radica en comprender
-        cómo funciona el cerebro y cómo impacta en el desarrollo emocional y
-        cognitivo de niños, adolescentes y adultos.
-        <br />
-        <br />
-        En mi práctica, me especializo en evaluar y tratar una variedad de
-        trastornos y dificultades neuropsicológicas en niños y adolescentes.
-        Utilizo evaluaciones exhaustivas para identificar las necesidades
-        individuales de mis jóvenes pacientes y desarrollar planes de
-        intervención personalizados que fomenten su desarrollo y bienestar.
-        <br />
-        <br />
-        Además, tengo experiencia en el tratamiento de trastornos de ansiedad en
-        adultos. Mi enfoque terapéutico se centra en proporcionar herramientas
-        prácticas y estrategias efectivas para ayudar a mis pacientes a manejar
-        y superar sus síntomas de ansiedad.
-        <br />
-        <br />
-        Mi objetivo es ayudar a cada individuo a alcanzar su máximo potencial y
-        disfrutar de una vida plena y significativa.
-        <br />
-        <br />
-        ¡Espero poder trabajar juntos para superar tus desafíos y alcanzar tus
-        metas!
-      </span>
+          alt="image"
+          class="h-80 w-full object-cover"
+        />
+      </div>
+      <div class="p-6">
+        <h6 class="mb-4 text-base font-bold leading-relaxed tracking-normal text-lime-900 antialiased">
+          Equipo
+        </h6>
+        <h4 class="mb-2  text-2xl font-bold leading-snug tracking-normal text-lime-800 antialiased">
+          Belén Peñalva Gutiérrez
+        </h4>
+        <p class="mb-8 text-base font-thin leading-relaxed text-gray-700 antialiased">
+          ¡Hola! Soy Belén Peñalva, neuropsicóloga. Mi pasión radica en comprender
+          cómo funciona el cerebro y cómo impacta en el desarrollo emocional y
+          cognitivo de niños, adolescentes y adultos.
+          <br />
+          <br />
+          En mi práctica, me especializo en evaluar y tratar una variedad de
+          trastornos y dificultades neuropsicológicas en niños y adolescentes.
+          Utilizo evaluaciones exhaustivas para identificar las necesidades
+          individuales de mis jóvenes pacientes y desarrollar planes de
+          intervención personalizados que fomenten su desarrollo y bienestar.
+          <br />
+          <br />
+          Además, tengo experiencia en el tratamiento de trastornos de ansiedad en
+          adultos. Mi enfoque terapéutico se centra en proporcionar herramientas
+          prácticas y estrategias efectivas para ayudar a mis pacientes a manejar
+          y superar sus síntomas de ansiedad.
+          <br />
+          <br />
+          Mi objetivo es ayudar a cada individuo a alcanzar su máximo potencial y
+          disfrutar de una vida plena y significativa.
+          <br />
+          <br />
+          ¡Espero poder trabajar juntos para superar tus desafíos y alcanzar tus
+          metas!
+        </p>
+        
+      </div>
     </div>
   </div>
-  <br />
-  <div
-    class="bg-white p-6 rounded-full shadow-lg flex flex-col items-center md:overflow-hidden sm:overflow-hidden"
-  >
-    <div class="text-center flex items-center mr-10">
-      <div class="text-xl font-thin text-black mb-4 text-center mr-8">
-        Verónica de Lózar Mena
-      </div>
-      <img
+  <div class="flex items-center justify-center  mx-0.5 md:mx-auto">
+    <div class="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-teal-950 shadow-md">
+      <div class="relative m-0 w-1/3 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+        <img
         src="{% static 'Foto Verónica de Lózar Mena.jpg' %}"
-        alt=""
-        class="w-36 h-36 rounded-full"
-      />
-    </div>
-    <div
-      class="flex flex-col md:flex-row text-center font-thin md:px-10 sm:px-10"
-    >
-      <span>
-        ¡Hola! Soy Verónica de Lózar Mena, psicóloga en MARÍA ROJAS-MARCOS.
-        PSICÓLOGOS. Mi enfoque se centra en ayudar a las personas a superar los
+          alt="image"
+          class="h-80 w-full object-cover"
+        />
+      </div>
+      <div class="p-6">
+        <h6 class="mb-4 text-base font-bold leading-relaxed tracking-normal text-lime-900 antialiased">
+          Equipo
+        </h6>
+        <h4 class="mb-2  text-2xl font-bold leading-snug tracking-normal text-lime-800 antialiased">
+          Verónica de Lózar Mena
+        </h4>
+        <p class="mb-8 text-base font-thin leading-relaxed text-gray-700 antialiased">
+          ¡Hola! Soy Verónica de Lózar Mena, psicóloga en María Rojas-Marcos Psicologos. Mi enfoque se centra en ayudar a las personas a superar los
         desafíos de la ansiedad, la depresión y el trauma para que puedan vivir
         vidas más plenas y satisfactorias.
         <br />
@@ -151,8 +176,67 @@
         Si estás listo para dar el primer paso hacia una vida más equilibrada y
         satisfactoria, estoy aquí para acompañarte en tu viaje hacia la
         recuperación y la transformación.
-      </span>
+        </p>
+        
+      </div>
     </div>
   </div>
+  <br />
+        <br />
+  <p class="mb-8 text-base font-thin leading-relaxed text-gray-700 antialiased">
+    En el gabinete de María Rojas-Marcos Psicologos, nuestra misión es proporcionar un espacio de apoyo y crecimiento personal donde cada individuo pueda explorar, comprender y fortalecer su bienestar emocional y mental. Nos comprometemos a ofrecer terapias integradoras, basadas en la evidencia y centradas en el cliente, para promover un cambio positivo y duradero en la vida de aquellos que confían en nosotros.
+    <br />
+        <br />
+Nuestra visión es ser  referentes en la promoción del bienestar integral y el desarrollo de la inteligencia emocional. Nos esforzamos por ser reconocidos como un referente en el campo de la salud mental, donde cada persona pueda encontrar el apoyo y las herramientas necesarias para cultivar una vida plena, significativa y resiliente.
+<br />
+        <br />
+Valores:
+
+<ul role="list" class="mb-8 space-y-4 text-left">
+  <li class="flex items-center space-x-3">
+    <!-- Icon -->
+    <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+    <span class="font-semibold">Compasión:</span><span> Guiados por la empatía y el respeto, tratamos a cada individuo con compasión y comprensión, reconociendo la singularidad de su viaje personal.</span>
+  </li>
+  <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span class="font-semibold">Integridad:</span><span> Nos comprometemos a actuar con integridad en todas nuestras interacciones, manteniendo la confianza y la confidencialidad de nuestros clientes en todo momento.</span>
+    </li>
+  <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span class="font-semibold">Excelencia:</span><span> Buscamos la excelencia en nuestro trabajo, comprometiéndonos a ofrecer servicios de alta calidad respaldados por la investigación y la práctica basada en la evidencia.
+      </span>
+    </li>
+  
+  <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span class="font-semibold">Colaboración:</span><span> Valoramos la colaboración y el trabajo en equipo, reconociendo que el bienestar emocional es un esfuerzo compartido que requiere la participación activa de todos los involucrados.
+      </span>
+    </li>
+  <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span class="font-semibold">Empoderamiento:</span><span> Creemos en el poder transformador del autodescubrimiento y la autodeterminación. Nos esforzamos por empoderar a nuestros clientes para que tomen el control de su propio camino hacia el bienestar y el crecimiento personal.
+      </span>
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+      <span class="font-semibold">Resiliencia:</span><span> Reconocemos la importancia de la resiliencia en la vida cotidiana y nos comprometemos a fomentarla en nuestros clientes, ayudándoles a desarrollar las habilidades necesarias para enfrentar los desafíos con fortaleza y optimismo.
+
+      </span>
+    </li>
+  
+</ul>
+<br />
+        <br />
+Estos principios guían nuestro trabajo diario y reflejan nuestro compromiso con el bienestar integral y el crecimiento personal de quienes confían en nosotros para su cuidado emocional y mental.
+
+  </p> 
+  <br />
+  
 </div>
 {% endblock %}
