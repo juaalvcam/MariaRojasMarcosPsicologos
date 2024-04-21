@@ -1,0 +1,75 @@
+<section class="ml-3 text-xl text-lime-800 font-thin">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+      <h2
+        class="mb-4 text-4xl tracking-tight font-extrabold text-text-lime-800"
+      >
+        Precios de sesiones
+      </h2>
+      <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
+        Elige el tipo de sesión más adecuado para ti. Puedes elegir también
+        nuestros programas antiestrés y siempre tienes la opción de consultarnos
+        para que te asesores de la mejor forma.
+      </p>
+      <!-- Interuptor -->
+      <div class="flex items-center justify-center mt-4">
+        <label class="inline-flex items-center mr-6">
+          <input
+            type="radio"
+            class="form-radio h-5 w-5 text-lime-600"
+            id="program"
+            name="switch"
+            checked
+          />
+          <span class="ml-2 text-gray-700">Programas</span>
+        </label>
+
+        <label class="inline-flex items-center">
+          <input
+            type="radio"
+            class="form-radio h-5 w-5 text-lime-600"
+            id="session"
+            name="switch"
+          />
+          <span class="ml-2 text-gray-700">Sesiones</span>
+        </label>
+      </div>
+      <br />
+      <!-- Contenido dinámico -->
+      <div
+        id="content"
+        class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
+      ></div>
+    </div>
+    <script src="../../static/js/interruptor_servicios.js"></script>
+    <script>
+      // Al cargar la página, establece el contenido en la opción guardada en localStorage
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedOption = localStorage.getItem("selectedOption");
+        if (savedOption) {
+          document.getElementById(savedOption).checked = true;
+          changeContent(savedOption);
+        } else {
+          // Si no hay ninguna opción guardada en localStorage, usa la opción marcada como 'checked'
+          const checkedOption = document.querySelector(
+            'input[name="switch"]:checked'
+          );
+          if (checkedOption) {
+            changeContent(checkedOption.id);
+          }
+        }
+      });
+
+      // Escucha los cambios en los botones de radio
+      document.querySelectorAll('input[name="switch"]').forEach((input) => {
+        input.addEventListener("change", function () {
+          // Cambia el contenido
+          changeContent(this.id);
+
+          // Guarda la opción seleccionada en localStorage
+          localStorage.setItem("selectedOption", this.id);
+        });
+      });
+    </script>
+  </div>
+</section>
