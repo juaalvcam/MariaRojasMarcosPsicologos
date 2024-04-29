@@ -9,12 +9,42 @@
         src="{% static articulo.imagen|remove_static %}"
       />
     </div>
-    <h2 class="text-2xl font-thin mb-4 text-justify text-lime-900">
+    <h2 class="text-2xl font-thin mb-4 text-center text-lime-900">
       {{articulo.titulo}}
     </h2>
-    <div class="text-justify font-thin overflow-hidden">
-      <p>{{articulo.descripcion|safe}}</p>
-    </div>
+    <p class="ckeditor-content text-justify font-thin overflow-hidden">
+      {{articulo.descripcion|safe}}
+    </p>
   </div>
 </div>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    var contents = document.querySelectorAll(".ckeditor-content");
+
+    contents.forEach(function (content) {
+      var element = content.nextElementSibling;
+
+      // Recorre los nextElementSibling hasta encontrar una tabla
+      while (element && element.tagName.toLowerCase() !== "table") {
+        element = element.nextElementSibling;
+      }
+
+      if (element) {
+        // Aplica los estilos a la tabla
+        element.classList.add(
+          "table-auto",
+          "border-collapse",
+          "w-full",
+          "border-2",
+          "border-black"
+        );
+
+        var cells = element.querySelectorAll("td");
+        cells.forEach(function (cell) {
+          cell.classList.add("px-4", "py-2", "border-2", "border-black");
+        });
+      }
+    });
+  });
+</script>
 {% endblock %}
