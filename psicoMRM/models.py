@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class Opiniones(models.Model):
@@ -11,7 +12,7 @@ class Opiniones(models.Model):
 class Articulo(models.Model):
     titulo = models.CharField(
         max_length=100, unique=True, null=False, blank=False)
-    descripcion = models.TextField(max_length=7000)
+    descripcion = RichTextField(config_name='default')
     imagen = models.ImageField(
         upload_to="static/articulos", unique=True, null=False, blank=False)
     creado = models.DateField(auto_now=True)

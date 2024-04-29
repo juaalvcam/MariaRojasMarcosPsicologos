@@ -1,15 +1,20 @@
 from django import forms
 from django.core.exceptions import ValidationError
 import re
+from ckeditor.fields import RichTextFormField
+
+from .models import Articulo
 
 
-class BlogForm(forms.Form):
-    titulo = forms.CharField(max_length=100, required=True, label="Título",
-                             help_text="Introduce un título para el artículo.", widget=forms.TextInput)
-    descripcion = forms.CharField(
-        label="Descripción", help_text="Introduce una descripción para el artículo.", max_length=7000, widget=forms.Textarea)
-    imagen = forms.ImageField(widget=forms.FileInput, label="Imagen",
-                              help_text="Introduce una imagen para el artículo.")
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Articulo
+        fields = ['titulo', 'descripcion', 'imagen']
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'form-control'}),
+            'descripcion': RichTextFormField(config_name='default'),
+            'imagen': forms.FileInput(attrs={'class': 'form-control'})
+        }
 
 
 def validate_email(value):
