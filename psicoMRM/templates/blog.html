@@ -94,7 +94,7 @@
   >
     {% for dato in articulos %}
     <div
-      class="bg-white p-10 rounded-full shadow-lg flex flex-col overflow-hidden items-center"
+      class="bg-white p-10 shadow-lg flex flex-col overflow-hidden items-center h-full border-4 border-gray-200 rounded-xl"
     >
       <img
         class="max-h-48 max-w-72 mr-4 sm:max-h-32 sm:max-w-48 object-cover"
@@ -107,7 +107,7 @@
           {{dato.titulo}}
         </h2>
         <p
-          class="text-justify font-thin overflow-hidden h-20"
+          class="ckeditor-content text-justify font-thin overflow-hidden h-20"
           data-lines="3"
         >
           {{dato.descripcion|safe}}
@@ -118,4 +118,28 @@
   </div>
   {% endif %}
 </div>
+<script>
+window.addEventListener("DOMContentLoaded", function() {
+  var contents = document.querySelectorAll('.ckeditor-content');
+  
+  contents.forEach(function(content) {
+    var element = content.nextElementSibling;
+
+    // Recorre los nextElementSibling hasta encontrar una tabla
+    while (element && element.tagName.toLowerCase() !== 'table') {
+      element = element.nextElementSibling;
+    }
+
+    if (element) {
+      // Aplica los estilos a la tabla
+      element.classList.add('table-auto', 'border-collapse', 'w-full', 'border-2', 'border-black');
+      
+      var cells = element.querySelectorAll('td');
+      cells.forEach(function(cell) {
+        cell.classList.add('px-4', 'py-2', 'border-2', 'border-black');
+      });
+    }
+  });
+});
+</script>
 {% endblock %}
