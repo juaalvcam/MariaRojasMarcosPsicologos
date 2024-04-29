@@ -1,24 +1,19 @@
 {% extends 'base.html' %} {% load filters %} {% load static %} {% block content %}
-<div class="container mx-auto p-8">
+<div class="container mx-auto p-8 flex flex-col min-h-screen justify-between">
   <div
-    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-10 mt-10 ml-10 justify-center items-center align-middle"
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-10 mt-10 ml-10 justify-center items-center align-middle flex-grow mb-20"
   >
-    <div
-      class="bg-white p-6 rounded-full shadow-lg flex flex-col overflow-hidden items-center"
-    >
+    <div class="flex justify-center">
       <img
-        class="max-h-48 max-w-72 mr-4 sm:max-h-32 sm:max-w-48 object-cover"
+        class="max-h-48 max-w-72 mr-4 sm:max-h-40 sm:max-w-48 object-cover"
         src="{% static articulo.imagen|remove_static %}"
       />
-      <h2 class="text-2xl font-thin mb-4 text-justify text-lime-900">
-        {{articulo.titulo}}
-      </h2>
-      <p
-        class="text-justify font-thin overflow-auto max-h-32 sm:max-h-24"
-        data-lines="3"
-      >
-        {{articulo.descripcion|safe}}
-      </p>
+    </div>
+    <h2 class="text-2xl font-thin mb-4 text-justify text-lime-900">
+      {{articulo.titulo}}
+    </h2>
+    <div class="text-justify font-thin overflow-hidden">
+      <p>{{articulo.descripcion|safe}}</p>
     </div>
   </div>
 </div>
