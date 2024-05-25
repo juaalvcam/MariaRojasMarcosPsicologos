@@ -108,9 +108,8 @@
         </h2>
         <p
           class="ckeditor-content text-justify font-thin overflow-hidden h-20"
-          data-lines="3"
         >
-          {{dato.descripcion|safe}}
+          {{dato.descripcion|truncatewords:50|safe}}
         </p>
       </a>
     </div>

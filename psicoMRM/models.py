@@ -15,4 +15,4 @@ class Articulo(models.Model):
     descripcion = RichTextField(config_name='default')
     imagen = models.ImageField(
         upload_to="static/articulos", unique=True, null=False, blank=False)
-    creado = models.DateField(auto_now=True)
+    creado = models.DateTimeField(auto_now=True)
