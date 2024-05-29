@@ -2,6 +2,7 @@
 {% if user.is_superuser %}
 <div class="flex justify-center mt-4 space-x-10">
   <button onclick="confirmDelete('{{ articulo.titulo|escapejs }}')" class="mt-8 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Borrar</button>
+  {% include 'modal_articulo.html' with modal_header="Editar entrada" submit_button="Actualizar entrada" modal_button="Editar entrada" %}
 </div>
 {% endif %}
 <div class="container mx-auto p-8 flex flex-col min-h-screen justify-between">

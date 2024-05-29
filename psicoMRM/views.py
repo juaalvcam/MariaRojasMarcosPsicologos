@@ -113,7 +113,14 @@ def blog(request):
 
 # DETALLE DE ARTÍCULO
 def article_detail(request, title):
-    return render(request, "article_detail.html", {"articulo": get_object_or_404(Articulo, titulo=title), 'STATIC_URL': settings.STATIC_URL})
+    articulo = get_object_or_404(Articulo, titulo=title)
+    form = BlogForm(instance=articulo)
+    if request.method == "POST":
+        form = BlogForm(request.POST, request.FILES, instance=articulo)
+        if form.is_valid():
+            form.save()
+            return redirect('blog')
+    return render(request, "article_detail.html", {"articulo": articulo, 'STATIC_URL': settings.STATIC_URL, "form": form})
 
 
 # BORRAR ARTÍCULO
