@@ -11,10 +11,12 @@ function changeContent(id) {
           class="flex flex-col p-6 mx-auto max-w-lg text-center text-cyan-50 body-font bg-teal-950 rounded-lg border border-gray-100 shadow"
           >
           <h3 class="mb-4 text-2xl font-semibold">
-          Programa de reducción antiestrés
+          Programa antiestrés de 8 semanas
           </h3>
           <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-          Programa integral para la reducción del estés
+          ¿Siempre con estrés o ansiedad? Tú ritmo de vida no te deja relajarte? Programa antiestrés de ocho semanas= psicología+masaje antiestrés 
+          ¡Te garantizamos una reducción de los niveles de estrés!! 
+          ¡Trabaja tu mente y relaja tu cuerpo!!
           </p>
           <div class="flex justify-center items-baseline my-8">
           <span class="mr-2 text-5xl font-extrabold">1120€</span>
