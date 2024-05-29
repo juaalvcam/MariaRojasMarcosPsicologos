@@ -16,3 +16,7 @@ class Articulo(models.Model):
     imagen = models.ImageField(
         upload_to="static/articulos", unique=True, null=False, blank=False)
     creado = models.DateTimeField(auto_now=True)
+
+    def delete(self, *args, **kwargs):
+        self.imagen.delete()
+        super().delete(*args, **kwargs)

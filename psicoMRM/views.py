@@ -116,6 +116,12 @@ def article_detail(request, title):
     return render(request, "article_detail.html", {"articulo": get_object_or_404(Articulo, titulo=title), 'STATIC_URL': settings.STATIC_URL})
 
 
+# BORRAR ARTÍCULO
+def delete_article(request, title):
+    get_object_or_404(Articulo, titulo=title).delete()
+    return redirect('blog')
+
+
 # SERVICIOS
 def servicios(request):
     return render(request, "servicios.html")

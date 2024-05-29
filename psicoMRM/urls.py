@@ -8,7 +8,8 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("blog/", views.blog, name="blog"),
     path("blog/<str:title>/", views.article_detail, name="article_detail"),
-    path("contacto/",views.contacto,name="contacto"),
+    path("blog/<str:title>/borrar/", views.delete_article, name="delete_article"),
+    path("contacto/", views.contacto, name="contacto"),
     # SERVICIOS
     path("servicios/", views.servicios, name="servicios"),
     path("servicios/terapia/individual/",
