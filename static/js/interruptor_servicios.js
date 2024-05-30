@@ -19,7 +19,7 @@ function changeContent(id) {
           ¡Trabaja tu mente y relaja tu cuerpo!!
           </p>
           <div class="flex justify-center items-baseline my-8">
-          <span class="mr-2 text-5xl font-extrabold">1120€</span>
+          <span class="mr-2 text-5xl font-extrabold">180€</span>
           </div>
           <!-- List -->
           <ul role="list" class="mb-8 space-y-4 text-left">
@@ -180,7 +180,7 @@ function changeContent(id) {
           emocional
           </p>
           <div class="flex justify-center items-baseline my-8">
-          <span class="mr-2 text-5xl font-extrabold">70€</span>
+          <span class="mr-2 text-5xl font-extrabold">190€</span>
           <span class="text-gray-500 dark:text-gray-400">/60€x4</span>
           </div>
           <!-- List -->
