@@ -19,7 +19,7 @@ function changeContent(id) {
           ¡Trabaja tu mente y relaja tu cuerpo!!
           </p>
           <div class="flex justify-center items-baseline my-8">
-          <span class="mr-2 text-5xl font-extrabold">180€</span>
+          <span class="mr-2 text-4xl font-extrabold">120€/mes</span>
           </div>
           <!-- List -->
           <ul role="list" class="mb-8 space-y-4 text-left">
@@ -78,7 +78,7 @@ function changeContent(id) {
           Programa integral para la reducción del estés
           </p>
           <div class="flex justify-center items-baseline my-8">
-          <span class="mr-2 text-5xl font-extrabold">2180€</span>
+          <span class="mr-2 text-4xl font-extrabold">180€/mes</span>
           </div>
           <!-- List -->
           <ul role="list" class="mb-8 space-y-4 text-left">
@@ -98,7 +98,7 @@ function changeContent(id) {
             </svg>
             <span
               >Masaje antiestrés
-              <span class="font-semibold">4 sesiones</span></span
+              <span class="font-semibold">2 sesiones</span></span
             >
           </li>
           <li class="flex items-center space-x-3">
@@ -117,7 +117,7 @@ function changeContent(id) {
             </svg>
             <span
               >Terapia Psicológica
-              <span class="font-semibold">4 sesiones</span></span
+              <span class="font-semibold">2 sesiones</span></span
             >
           </li>
           </ul>
@@ -137,7 +137,7 @@ function changeContent(id) {
           Programa integral para la reducción del estés
           </p>
           <div class="flex justify-center items-baseline my-8">
-          <span class="mr-2 text-5xl font-extrabold">3240€</span>
+          <span class="mr-2 text-4xl font-extrabold">240€/mes</span>
           </div>
           <!-- List -->
           <ul role="list" class="mb-8 space-y-4 text-left">
